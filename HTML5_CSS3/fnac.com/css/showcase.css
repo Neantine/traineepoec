@@ -1,0 +1,21 @@
+.slider {
+    display:flex;
+    flex-direction: column;
+    background-color: dodgerblue;
+
+}
+
+.slider__image
+{
+    height:auto;
+}
+
+.slider__button {
+    align-self: center;
+    border:1px solid #fff;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-weight:bold;
+    text-decoration: none;
+}

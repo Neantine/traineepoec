@@ -1,0 +1,14 @@
+.outer
+{
+    width:300px;
+    height:200px;
+    background-color: aqua;
+    padding:20px;
+}
+
+.inner
+{
+    width:100px;
+    height:100px;
+    background-color: crimson;
+}

@@ -1,0 +1,137 @@
+code span {
+    /*Tous les span (element de type inline) de code (on lit de droite a gauche) ont les proprietes suivantes ()*/
+    color:red;
+    font-weight: bold;
+}
+
+div {
+    /*Tous les div (element neutre de type bloc, qui prend toute la largeur du parent)*/
+    border: 1px dashed black;
+}
+
+.green-bg {
+    /*Tous les elements de classe green-bg definis dans le doc html*/
+    background-color: greenyellow;
+}
+
+
+.bold {
+    /*Tous les elements de classe bold definis dans le doc html*/
+    font-weight: bold;
+}
+
+#smiley {
+    /*L'element dont l'id est smiley*/
+    color:orangered;
+}
+
+tr:nth-child(1) {
+     /*La premiere ligne du tableau*/
+     background-color: darkmagenta;
+ }
+
+tr:nth-child(2n) {
+    /*Chaque ligne d'indice pair (on peut aussi utiliser even et odd)*/
+    background-color: #ccc;
+}
+
+input[name]
+{
+    /*Element de type input qui a un attribut name*/
+    border-color: aquamarine;
+}
+
+input[type="submit"]
+{
+    /*Element de type input dont l'attribut type est egal a submit*/
+    background-color: darkslateblue;
+}
+
+/*Pseudo class*/
+input:focus {
+    /*Element de type input qui a le focus*/
+    background-color: lightseagreen;
+}
+
+label:hover {
+    /*Element de type label qui a le hover*/
+    text-decoration: underline;
+}
+
+form::after
+{
+    content:'je suis ajouté par CSS!';
+}
+
+p.cascade {
+    /*Tous les p qui sont de class cascade*/
+     background-color: orange;
+     font-size: 24px;
+ }
+
+p.cascade {
+    /*Va surcharger ce qu'on a defini precedemment*/
+    background-color: pink;
+}
+
+div.inheritance
+    /*Tous les div qui sont des class inheritance
+    On constate que tous les descendants sont affectés*/
+{
+    font-size: 32px;
+}
+
+p.class_specificity
+{
+    background-color: darkslateblue;
+}
+
+p
+{
+    background-color: chartreuse;
+}
+
+div.box-model
+{
+    /*Le contenu sort de la boite, il ne s'ajuste pas a la boite*/
+    border:none;
+    background-color: deeppink;
+    width:40px;
+    height:60px;
+    padding:10px; /*10 px de chaque cote*/
+    margin-bottom: 10px; /*Marge en dessous*/
+    box-sizing: border-box; /*La meilleure facon de faire le calcul des tailles, voir ds le debugger*/
+}
+
+span.box-model-span
+{
+    border:3px solid black;
+    padding:10px;
+    margin:10px;
+    /* on peut essayer de changer les dimensions mais ca n'a pas d'effet puisque le span est un inline*/
+}
+
+
+/*Exercice de positionnement*/
+
+.video-player
+{
+    width:400px;
+    background-color: black;
+    position:relative;
+}
+
+.video-player__video
+{
+    height:300px;
+    background-color:blue;
+}
+
+.video-player__controls
+{
+    height:70px;
+    background-color:orange;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}

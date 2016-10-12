@@ -1,0 +1,18 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title>Add a new film</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--Formulaire pointe sur lui-meme, on utilise la meme page qd on valide-->
+<form action="http://localhost:3000/films/add" method="POST">
+    <label for="TITLE">nom</label>
+    <input id="title" type="text" placeholder="Film title" name="title">
+    <input type="submit" value="Add">
+    <% if (locals.error && error.title) { %>
+    <span><%= error.title %></span>
+    < % } %>
+</form>
+</body>
+</html>

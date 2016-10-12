@@ -1,0 +1,21 @@
+.link-list {
+    display:flex;
+    background-color: black;
+    padding:20px;
+}
+
+.link-list__item {
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    flex-wrap:wrap;
+    flex-basis:50%;
+}
+
+.link-list__item a {
+    color:white;
+    text-decoration: none;
+}
+
+.link-list__item li:hover {
+    text-decoration: underline;
+}

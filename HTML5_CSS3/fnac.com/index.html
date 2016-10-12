@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fnac: soldes etc.</title>
+
+    <!--Fonts  etc-->
+    <link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <!--My CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header-block.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/menu-icon-flex.css">
+    <link rel="stylesheet" href="css/search-box.css">
+    <link rel="stylesheet" href="css/showcase.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+
+<body>
+<section class="header-logo-search-links__container">
+    <!--<header class="header">-->
+        <a class="header__menulink" href="">
+            <div class="burger">
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+                <div class="burger__item"></div>
+            </div>
+        </a>
+        <a class="header__logolink" href="">
+            <img src="img/logo.svg" alt="logo fnac">
+        </a>
+        <nav class="header__shoplinks  menu-icon-flex">
+            <!--2 classes pour cet element-->
+            <a class="menu-icon-flex__item menu-icon-flex__item__hidden400" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNy41IDU1LjVzNi43NiAxNSAxNSAxNWM4LjMzMyAwIDE1LTYuNzYzIDE1LTE1IC4wOS04LjMzLTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMy41IDU5LjVoM3YzaC0zek0xOC4yOTMgNTQuOTQ1Yy0uOTIuNzE0LTEuODM3IDEuMjMtMi4wNCAyLjQ0OFY1OC41SDEzLjV2LTEuMjFjLjEwNC0xLjgzNyAxLjAxNy0yLjY2IDEuODM1LTMuMjcuODEzLS42MDYgMS41MzItMS4xMiAxLjUzMi0yLjI0NCAwLTEuMjI4LS42MDctMS44MzYtMS43My0xLjgzNi0xLjUzMyAwLTIuMTQ3IDEuMjMtMi4xNDcgMi42Nkg5LjkzYy4xMDUtMi45NiAyLjA0Mi01LjEgNS01LjEgMy44NzcgMCA1LjIwNCAyLjQ1IDUuMjA0IDMuOTc3LS4wOTggMS45MzctMS4wMjIgMi43Ni0xLjg0IDMuNDY4eiIvPjwvc3ZnPg==" alt="">
+            </a>
+            <a class="menu-icon-flex__item" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNjYuNSA1NS41czYuNzU2IDE1IDE1IDE1YzguMzMzIDAgMTUtNi43NjIgMTUtMTUgLjA5LTguMzM0LTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xNS41IDQ3LjVjLTIuMzYyIDAtNC4yNDggMS41ODMtNC44MSAzLjczLS4wOTguMzc1LS4xOS44NC0uMTkgMS4yMTQgMCAuNzQ0LjM3OCAxLjk2Mi44NSAyLjcwNi4xODguMjgyIDQuMTUgNi4zNSA0LjE1IDYuMzVzMy45NjItNi4xNTggNC4xNS02LjM1Yy40NzctLjg0Ljg1LTEuOTYyLjg1LTIuNzA2IDAtLjQ3LS4wOTgtLjg0LS4xOS0xLjIxMy0uNTYtMi4xNDctMi41NDYtMy43My00LjgxLTMuNzN6Ii8+PGVsbGlwc2UgY3g9IjE1LjUiIGN5PSI1Mi4yNTgiIHJ4PSIxLjc4OSIgcnk9IjEuNzciLz48L3N2Zz4=" alt="localisation magasin">
+            </a>
+            <a class="menu-icon-flex__item" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNy41IDU1LjVzNi43NiAxNSAxNSAxNWM4LjMzMyAwIDE1LTYuNzYzIDE1LTE1IC4wOS04LjMzLTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxnIGZpbGw9IiNGRkYiPjxwYXRoIGQ9Ik0xOS41IDU1Ljc5N2MtLjk5Ny45OTYtMi40IDEuNjk1LTQgMS42OTVzLTMtLjctNC0xLjY5NUM5LjY5NyA1NyA4LjUgNTkuNSA4LjUgNjEuNWgxNGMwLTIuMDA0LTEuMTAyLTQuNDAzLTMtNS43MDN6TTEzLjQ5IDU0LjkwM2MuNTk2LjQgMS4zLjU5NyAyIC41OTcuNzk2IDAgMS41LS4yIDItLjU5Ny44OTgtLjU5NiAxLjUtMS42OTYgMS41LTIuOSAwLTEuODk4LTEuNTk0LTMuNTAzLTMuNS0zLjUwMy0xLjkwOCAwLTMuNSAxLjU5NS0zLjUgMy41MDMuMDAzIDEuMjA0LjYgMi4zMDUgMS41IDIuOXoiLz48L2c+PC9zdmc+" alt="mon compte">
+            </a>
+            <a class="menu-icon-flex__item" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNy41IDU1LjVzNi43NiAxNSAxNSAxNWM4LjMzMyAwIDE1LTYuNzYzIDE1LTE1IC4wOS04LjMzLTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0yMS45OCA1MS41aC0yLjc5di0uMTkyYzAtMi4xNjUtMS42Mi0zLjc5My0zLjY3Ny0zLjgwOGgtLjAyNmMtMi4wNTYuMDE1LTMuNjc4IDEuNjQzLTMuNjc4IDMuODA4di4xOTJIOC45OTdjLS4zIDAtLjQ5OC4zOTctLjQ5OC42OTJsMS4zOSA3LjMyYy4xMDIuNTkuNjkuOTg3IDEuMjg0Ljk4N2g4LjYzMmMuNTkgMCAxLjE5LS4zIDEuMjg1LS44OWwxLjM5LTcuNDJjLjEtLjM5LS4xOTgtLjY5LS41LS42OXptLTguNTMgMHYtLjE5MmMwLTEuMjYyLjg3NS0yLjI3NSAyLjA1LTIuMjc1IDEuMTg1IDAgMi4wNTIgMS4wMTQgMi4wNTIgMi4yNzV2LjE5MkgxMy40NXoiLz48L3N2Zz4=" alt="mon panier">
+            </a>
+        </nav>
+        <section class="search-section">
+        <form class="search-box" action="">
+            <input class="search-box__bar" type="text" name="search" placeholder="Que recherchez-vous?">
+            <button class="search-box__submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <!--On aurait pu aussi utiliser background-image    -->
+        </form>
+    </section>
+
+    <!--</header>-->
+
+</section>
+
+
+
+
+<section class="showcase">
+    <div class="slider">
+        <img class="slider__image" src="http://dummyimage.com/800x200/45e6ce/0011ff&text=showcase+image" alt="">
+        <a class="slider__button">En profiter</a>
+    </div>
+</section>
+
+<section class="bon-plans-ete gallery">
+    <header class="gallery__header">
+        <!--On peut utiliser simplement h1, qui est un element block qu'on peut styler ensuite-->
+        <h1>Les bons plans de l'été jusqu'à -50%</h1>
+    </header>
+    <div class="gallery__content">
+        <!--div.gallery__item*6>(div>img)+p-->
+        <div class="gallery__item">
+            <div class="gallery__item__container">
+                <img src="img/3b9d1edc-de3c-450b-9443-53bbb1e14370.JPG" alt="">
+            </div>
+            <p>DVD</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__container">
+                <img src="img/5a0a6dc0-741c-4222-a502-4193a5bd665e.JPG" alt="">
+            </div>
+            <p>TV Video</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__container">
+                <img src="img/5e2a9be6-f6c7-472a-92df-790a46946e94.JPG" alt="">
+            </div>
+            <p>iPad Pro</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__container">
+                <img src="img/7fb62ca3-9882-4a81-b8d9-2016b2f81bd7.JPG" alt="">
+            </div>
+            <p>XBOX One...</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__container">
+                <img src="img/31ef0b98-626f-4476-b468-d92788079844.JPG" alt="">
+            </div>
+            <p>iPad Occasions...</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__container">
+                <img src="img/61e6a7f4-256e-4378-9c1c-950c5bfd04ad.JPG" alt="">
+            </div>
+            <p>Smartphones</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <section class="link-list">
+        <!--div.link-list__item*4>p+ul>li*4-->
+        <div class="link-list__item">
+            <p>LE GROUPE FNAC</p>
+            <ul>
+                <li><a href="">Qui sommes nous?</a></li>
+                <li>Recrutement</li>
+                <li>BlaBla1</li>
+                <li>BlaBLA2</li>
+            </ul>
+        </div>
+        <div class="link-list__item">
+            <p>AIDE SAV SERVICES</p>
+            <ul>
+                <li>SAV</li>
+                <li>BSeoinD'aide</li>
+                <li>Cartes Cadeaux</li>
+                <li>Argus</li>
+                <li>Publicité</li>
+            </ul>
+        </div>
+        <div class="link-list__item">
+            <p>APROPOS</p>
+            <ul>
+                <li>Conditions generales de ventes</li>
+                <li>Donnees personnelles</li>
+                <li>Mentions legales</li>
+                <li>Signaler un abus</li>
+                <li>Cookies</li>
+            </ul>
+        </div>
+        <div class="link-list__item">
+            <p>A LA FNAC</p>
+            <ul>
+                <li>Fnacpro</li>
+                <li>Labofnac</li>
+                <li>Fnac Market Place</li>
+                <li>Fnac Play</li>
+            </ul>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

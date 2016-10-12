@@ -1,0 +1,15 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title>All Films</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <table>
+        <% for(let f of film) { %>
+            <tr><td><%= f.film_id %></td><td><%= f.title %></td></tr>
+        <% } %>
+    </table>
+</body>
+</html>

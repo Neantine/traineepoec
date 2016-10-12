@@ -1,0 +1,57 @@
+.gallery {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.gallery__header {
+    padding:20px 10px;
+    text-transform: uppercase;
+    color:#444;
+}
+
+.gallery__header h1 {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow:ellipsis; /*Remplace le texte par ... qd il est coupé*/
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.gallery__content {
+    display:flex;
+    flex-wrap:wrap; /*Passe a la ligne*/
+}
+
+.gallery__item {
+    flex-basis:50%; /*Chaque gallery item fait 50% de la largeur, donc on a tj 2 elements par ligne*/
+    border-right:1px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
+}
+
+/*CAS PARTICULIER POUR LES IMAGES...*/
+.gallery__item img {
+    width:90%; /*La taille des images ne depassera jamais la taille de son contenant*/
+    transition: 0.4s transform;
+}
+
+.gallery__item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery__item__container {
+    padding:10px;
+    background-color: #f2f2f2;
+}
+
+.gallery__item p {
+    border-top:1px solid #d8d8d8;
+    padding:18px;
+    font-size: 13px;
+}
+
+/*Definition des regles pour le responsive design*/
+@media screen and (min-width: 800px) {
+    .gallery__item {
+        flex-basis: 25%;
+    }
+}

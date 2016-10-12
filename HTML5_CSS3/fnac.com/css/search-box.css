@@ -1,0 +1,79 @@
+.search-section {
+    padding:10px;
+    background-color: #cccccc;
+    transition: 1s background-color; /*Toute modification du background-color sera fait avec une transition de 1 seconde*/
+    width:100%;
+}
+.search-section:hover
+{
+    background-color:#999;
+}
+
+
+.search-box {
+    display:flex;
+    height:50px;
+}
+
+.search-box__bar {
+    flex-grow: 1;
+    border:none;
+    outline:none;
+    padding-left:10px;
+}
+/*Pour changer le style d'un placeholder, pour le moment ya pas de standard mais plusieurs bouts de code en fct du navigateur.
+voir https://css-tricks.com/almanac/selectors/p/placeholder/ */
+
+.search-box__bar::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: pink;
+}
+.search-box__bar::-moz-placeholder { /* Firefox 19+ */
+    color: pink;
+}
+.search-box__bar:-ms-input-placeholder { /* IE 10+ */
+    color: pink;
+}
+.search-box__bar:-moz-placeholder { /* Firefox 18- */
+    color: pink;
+}
+.search-box__submit {
+    border:none;
+}
+
+
+.search-box__submit {
+    background-color: #f5b027;
+    height:50px;
+    width: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .header-logo-search-links__container.burger {
+        order:1;
+    }
+    .header-logo-search-links__container.header__logolink {
+        order:2;
+    }
+    .header-logo-search-links__container.header__shoplinks {
+        order:3;
+    }
+    .header-logo-search-links__container.search-section {
+        order:4;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header-logo-search-links__container.search-section {
+       order:2;
+       width:300px;
+    }
+    .header-logo-search-links__container.burger {
+        order:4;
+    }
+    .header-logo-search-links__container.header__logolink {
+        order:1;
+    }
+    .header-logo-search-links__container.header__shoplinks {
+        order:3;
+    }
+}

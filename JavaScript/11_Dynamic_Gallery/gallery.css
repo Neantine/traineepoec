@@ -1,0 +1,14 @@
+.gallery {
+    display:flex;
+    flex-wrap: wrap; /*passe a la ligne qd ya pu de place*/
+}
+
+.gallery__item {
+    margin:15px;
+}
+
+body {
+    /*background-image: url('');*/
+    /* www.subtulepattern.com pour avoir des images de font au lieu de background color */
+}
+

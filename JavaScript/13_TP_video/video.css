@@ -1,0 +1,68 @@
+.video-player
+{
+    width:400px;
+    height:300px;
+    background-color: black;
+    position:relative;
+}
+
+.video-player__video
+{
+    height:300px;
+    background-color:blue;
+    align-content: center;
+    margin:50px;
+    margin-top: 50px;
+}
+
+.video-player__controls
+{
+    height:70px;
+    background-color:orange;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.video-player__controls__buttons
+{
+    position:absolute;
+    display:flex;
+    align-content: center;
+}
+
+.play_button {
+     height: 40px;
+     width:40px;
+     background-color: yellowgreen;
+    margin: 10px;
+ }
+
+.stop_button {
+    height: 40px;
+    width:40px;
+    margin: 10px;
+    background-color: yellowgreen;
+}
+
+.pause_button {
+    height: 40px;
+    width:40px;
+    margin: 10px;
+    background-color: yellowgreen;
+}
+
+
+
+.hiddenControls
+{
+    /*display:none;*/
+    opacity:0;
+    transition: 0.7s opacity;
+}
+
+.visibleControls
+{
+    /*display:none;*/
+    transition: 0.7s opacity;
+}

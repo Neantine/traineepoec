@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>CSS</h1>
+<section>
+    <h1>Généralités</h1>
+    <p>CSS: Cascading Style Sheet. Ajouter du style a un doc HTML (entre autres utilisations possibles)</p>
+    <p>Version actuelle CSS 3, <a href="https://www.w3.org/Style/CSS/specs">Spécifications</a>
+    CSS est maintenant organisé en modules: secteurs, backgrouns et bordures, valeurs et unités, media queries...
+    Vue d'ensemble <a href="https://www.w3.org/Style/CSS/Overview.fr.html">ici</a></p>
+</section>
+<section>
+    <h1>Termes</h1>
+    <h2>Selectors</h2>
+    <p>Permet de sélectionner les elements du document dont on veut changer certaines proprietes, définir les règles CSS</p>
+    <code><span style="color:blue; font-weight: bold";>p</span> {color:red;}</code>
+    <pre>Le tag &lt;pre&gt; garde
+        le
+        formatage</pre>
+    <p>A ne pas faire ! Balise &lt;span style=...&gt; permet d'isoler ce qui est dedans pour appliquer une modif de style
+    A plus de poids que la feuille de style; mieux vaut utiliser la feuille de style</p>
+    <h2>Properties</h2>
+    <pre><code>
+        p {
+        <span>color</span> : red;
+        <span>font-size</span> :16px;
+        }
+    </code></pre>
+    <h2>Valeurs</h2>
+    <pre><code>
+        p {
+        color : <span>red</span>;
+        font-size :<span>16px</span>;
+        }
+    </code></pre>
+</section>
+<section>
+    <h1>Selectors</h1>
+    <p><a href="http://www.w3.org/TR/css3-selectors/">selectors</a></p>
+    <h2>Exples</h2>
+    <p>Selection par class, par ID, par indice dans une table...</p>
+    <div class="green-bg bold">Hello</div>
+    <div class="green-bg">World....</div>
+    <div id="smiley" class="bold">:-/</div>
+    <!--table>tr*5>td*2>{$}-->
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <h3>Selection par attributs</h3>
+    <form action="">
+        <label for="username">username</label>
+        <input id="username" type="text" name="username">
+        <label for="passwd">passwd</label>
+        <input id="passwd" type="text" name="passwd">
+        <input type="submit" value="Connect">
+    </form>
+</section>
+<section>
+    <h1>Referencer du CSS dans le doc HTML</h1>
+    <p>Les styles peuvent etre deinis comme suit, dans l'ordre de priorité</p>
+    <ol reversed>
+        <li>La feuille de style par defaut du navigateur</li>
+       <li> Feuilles de style externes, balise link dans balise head: BEST PRACTICE</li>
+       <li>Definir des styles localement avec balise style dans head (voir premier projet HTML)</li>
+       <li>Inline dans l'attribut style d'un element HTML (voir plus haut)</li>
+    </ol>
+</section>
+<section><h1>Cascade</h1>
+    <p>Tous les styles cascadent du haut vers le bas de la feuille de style</p>
+    <p>Permet de rajouter et surcharger progressivement des styles</p>
+<h2>Exple</h2>
+<p class="cascade">Lorem</p>
+<p class="cascade">Lorem</p>
+</section>
+<section><h1>Heritage</h1>
+    <p>Mecanisme qui transmet certaines proprietes d'un parent vers l'enfant. Pas toutes (exple background-color)</p>
+    <h2>Exple</h2>
+    <div class="inheritance">
+        <p>Cette <em>phrase </em> a-t-elle une <a href="">font-size</a> de 20px?</p>
+    </div>
+</section>
+<section><h1>Specificity</h1>
+<p>Mecanisme de CSS pour determiner quelle regle prend le pas qd plusieurs regles peuvent d'appliquer au meme element
+Pour chaque selecteur une specificité est calculee</p>
+<h2>Exple</h2>
+    <p class="class_sepcificity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi autem cupiditate distinctio ducimus ea, ipsam itaque libero, natus nobis nulla officia officiis omnis, provident rem rerum similique voluptatem voluptates.</p>
+    <p id="id_specificity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at aut commodi consequatur deserunt esse et, modi mollitia nulla obcaecati, odio quae quam ratione rerum saepe sint sit ut vero?</p>
+    <p class="other_class_specificity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur commodi dolorem magni minima nostrum possimus soluta sunt totam! Asperiores beatae eius error et harum libero nostrum perspiciatis provident quia voluptate?</p>
+    <a href="https://www.sitepoint.com/web-foundations/specificity/">Les regles de Specificity ici</a>
+    <p>En gros plus c'est specifique, plus c'est prioritaire. L'ID etant donc le plus puissant.</p>
+</section>
+<section><h1>Box Model</h1>
+<p>Chaque element a des dimensions par defaut</p>
+<p>Les elmt block (dont le 'display' est block) ont une largeur de 100%: ils prennent toute la place disponible</p>
+<p>Les elmt Inline et Inline-block s'etendent et se reduisent verticalement en fct de leur contenu</p>
+<p>Les inline n'acceptent pas de changement de dimension, alors que les block et inline-block oui</p>
+<p>Il est possible de changer la proprio Display pour passer d'un elmt block et un inline et inversement</p>
+<p>On peut modifier les attributs padding(espace entre contenu et bordure) et margin(espace entre elements)</p>
+<p>En fct des navigateur, la dimension des elements est calculee differement....(padding+dim contenu, ou dim contenu). Mais on peut utiliser la propriete
+box-sizing pour choisir comment les calculs de taille sont faits</p>
+<h2>Exple</h2>
+<div class="box-model">Je suis une BOX</div>
+<div class="box-model">Je suis une autre BOX</div>
+    <p>Lorem ipsum <span class="box-model-span">dolor sit amet</span>, consectetur adipisicing elit. Accusamus adipisci architecto asperiores at consequuntur delectus dignissimos, dolorem ducimus, esse, fugiat harum molestiae molestias obcaecati perferendis quod ratione sequi ullam ut.</p>
+</section>
+<section>
+    <h1>Exercice: recreer un site internet existant</h1>
+    <p>Méthodologie</p>
+    <ul>
+        <li>Partir d'une maquette</li>
+        <li>Choisir une approche mobile->desktop ou le contraire</li>
+        <ul>
+            <li>Essayer de trouver les composants et blocs autonomes potentiellement réutilisables</li>
+            <li>Reflechir en systeme de grille: identifier des lignes de contenu, et des colonnes dans ces lignes</li>
+        </ul>
+        <li>Eliminer les potentielles incompatibilités des navigateurs <a href="http://cssreset.com/">exemples ici</a></li>
+        <li>Utiliser une methodologie type <a href="http://getbem.com/">BEMcss</a></li>
+        <li>Utiliser les technique de layout modernes type flexbox <a href="http://www.learnlayout.com/">learnlayou</a>
+            <a href="https://www.w3.org/TR/css-flexbox-1/">flexbox</a>
+            <a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">Tuto flexbox</a>
+        </li>
+
+
+
+    </ul>
+</section>
+
+<section>
+    <h1>Position</h1>
+    <div class="video-player">
+        <div class="video-player__video"></div>
+        <div class="video-player__controls"></div>
+    </div>
+</section>
+</body>
+</html>

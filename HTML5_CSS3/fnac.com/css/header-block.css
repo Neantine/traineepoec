@@ -1,0 +1,38 @@
+.header {
+    /*Tous les elements de classe header sont des flexbox et leurs enfants directs sont des flexitem*/
+    display:flex;
+    flex-direction: row; /*par defaut mais on peut modifier l'agencement qd on reduit la fenetre*/
+    align-items: stretch;
+    /*background-color: green;*/
+    height:38px;
+}
+
+.header__logolink {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.header__logolink img {
+   height:30px;
+}
+
+.header__menulink {
+    width:50px;
+    /*pour que la zone cliquable autour du hamburger prenne toute la hauteur comme sur le site original*/
+    padding-top:calc((38px - (38px/3))/2);
+    padding-left:calc((50px - (50px/3))/2);
+}
+
+.header__shoplinks {
+    flex-grow: 1;
+    display:flex;
+
+}
+
+
+.burger {
+    height:calc(38px/3);
+    width:calc(38px/3);
+}

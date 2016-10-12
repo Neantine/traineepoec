@@ -1,0 +1,10 @@
+.burger__item {
+    height: calc(100%/5);
+    /*color: deeppink; cliquer sur le carré couleur, la pipette apparait, l'utiliser sur le site original pour recuperer le code couleur*/
+    background-color: #323232;
+    margin-bottom: calc(100%/5);
+}
+
+.burger__item:last-child {
+    margin-bottom: 0;
+}

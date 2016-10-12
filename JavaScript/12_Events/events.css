@@ -1,0 +1,26 @@
+#surprise {
+    height:150px;
+    background-color: beige;
+}
+
+#reductableZone {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#titleZone {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#reductableTextContent {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
+
+.contenthidden {
+    /*height:0px;*/
+    display : none;
+}

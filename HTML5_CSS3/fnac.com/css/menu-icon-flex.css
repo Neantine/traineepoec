@@ -1,0 +1,27 @@
+.menu-icon-flex {
+    display:flex;
+}
+
+.menu-icon-flex__item
+{
+    flex-grow: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-icon-flex__item:hover {
+    border-bottom:4px solid #323232
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .menu-icon-flex__item__hidden400 {
+        visibility:collapse;
+        width:0;
+
+    }
+}

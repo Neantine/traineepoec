@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test0": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine",
+    "start": "set NODE_ENV=production && node ./process/process",
+    "start_dev": "set NODE_ENV=development && node ./process/process"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "express-generator": "^4.13.4",
+    "faker": "^3.1.0",
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1"
+  }
+}

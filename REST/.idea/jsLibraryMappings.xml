@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/git/node-rest-heatmap/server" libraries="{REST/git/node-rest-heatmap/server/node_modules}" />
+    <file url="file://$PROJECT_DIR$/git/node-rest-heatmap/server-websocket" libraries="{REST/git/node-rest-heatmap/server-websocket/node_modules}" />
+    <file url="file://$PROJECT_DIR$/node-rest-heatmap/server" libraries="{REST/node-rest-heatmap/server/node_modules}" />
+    <file url="file://$PROJECT_DIR$/node-rest-heatmap/server-websocket" libraries="{REST/node-rest-heatmap/server-websocket/node_modules}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+  </component>
+</project>

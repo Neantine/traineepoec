@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        console.log("javascript dans le head"); //Ne pas faire ceci: mettre tj le javascript dans des fichiers externes
+    </script>
+    <!--A eviter aussi-->
+    <script src="slow.js">
+    </script>
+</head>
+<body>
+<!--<script src="dom_manipulation.js"></script>-->
+<p>Ma super appli est en train de charger...</p>
+<script>
+    console.log("javascript au debut du body"); //Ne pas faire ceci: mettre tj le javascript dans des fichiers externes
+</script>
+<script src="dom_manipulation.js"></script>
+<!--<script src="slow.js"></script>-->
+</body>
+</html>
+
+<!--Le javascript est charge de facon synchrone, et le CSS asynchrone. On peut modifier ca exceptionnellement avec le mot clef async
+script async src=...
+-->

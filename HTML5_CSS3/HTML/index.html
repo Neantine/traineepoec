@@ -1,0 +1,185 @@
+<!DOCTYPE html> <!--A mettre obligatoirement pour HTML5-->
+<html lang="fr"> <!--Attribut entre " "-->
+<head>
+    <!--Plein d'infos pour le navigateur, moteur de recherche etc.-->
+    <meta charset="UTF-8">  <!--A mettre le plus haut possible, encodage du document,
+    quasiment tous les caracteres possibles mais attention car l'utilisateur peut surcharger l'encodage ds son naviagteur-->
+    <title>1er cours HTML</title>
+    <!--CE BOUT DE CODE CSS MARCHE MAIS NE JAMAIS LE FAIRE COMME CA, METTRE LE CODE CSS A PART :)))-->
+    <style>
+        p {color:red;}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--commentaires avec Ctrl+/-->
+HTML est un langage structuré par des balises (tag).
+Contenu visible dans body.
+HTML sert a structurer le document.
+Pour mettre en forme (fonte etc) il faut CSS (feuilles de style) (avant HTML suffisait)
+Pour rendre dynamique (interactivite, evenements..) il faut JavaScript
+<h2>On peut faire un titre en HTML avec h1 (titre de niveau 1) mais on ne sait pas exactement ce que ca fait en fct du navigateur</h2>
+Penser a valider le document dans l'IDE ou sur <a href="http://validator.w3c.org">http://validator.w3c.org</a>
+<section>
+    On peut isoler des blocs de contenu avec le tag &lt;section&gt;
+    Utile pour l'accessibilité par exemple, pour les ebooks...etc
+    On pourra avec CSS definir un style par section
+    <article>
+        On peut aussi creer des sous groupes avec &lt;article&gt;
+        Penser une page comme un ensemble de composants.
+    </article>
+    On peut definir un titre par section alors qu'avant on ne pouvait en n'avoir qu'un par page (tag h1)
+</section>
+<p> Le tag &lt;a&gt; permet de creer des hyperliens. L'attribut target permet de dire au navigateur d'ouvrir le lien ds un onglet ou pas.
+    <a href="a.html">lien relatif vers le document a.html</a>
+    <a href="/HTML_CSS3/HTML/a.html">lien relatif vers le document a.html</a>
+    <a href="http://localhost:63342/HTML5_CSS3/HTML/a.html">lien absolu vers le document a.html</a>
+    <a href="#anchor">lien interne vers un element id="anchor"</a>
+</p>
+Avec le plugin emmet on peut creer du contenu (p*10+tab crée 10 paragraphes vides)
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<article>
+    <h1>Balises ul</h1>
+    <p>Les balises ul, ol et dl permettent de creer des listes</p>
+    <h2>Exemple</h2>
+    <h3>ul</h3>
+    <p>le code EMMET "ul>li*3>{item-$}+tab" va creer la liste suivante
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+    </ul>
+    <h3>ol</h3>
+    <p>le code EMMET "ol>li*3>{item-$}+tab" va creer la liste suivante
+    <ol>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+    </ol>
+    </p>
+    <h3>dl</h3>
+    <p>le code EMMET "dl>(dt+dd)*3+tab" va creer la liste suivante</p>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    <p>le code EMMET "dl>((dt>{titre item $})+(dd>{definition item $}))*3+tab" va creer la liste suivante</p>
+    <dl>
+        <dt>titre item 1</dt>
+        <dd>definition item 1</dd>
+        <dt>titre item 2</dt>
+        <dd>definition item 2</dd>
+        <dt>titre item 3</dt>
+        <dd>definition item 3</dd>
+    </dl>
+</article>
+<article>
+    <h1>Les tables</h1>
+    <p>le code EMMET "table>tr>td+tab" va creer une table (TR=table row, TD=table division)</p>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td>foot1</td>
+            <td>foot2</td>
+            <td>foot3</td>
+        </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>cellule 1</td>
+                <td colspan="2">cellule 2</td>
+            </tr>
+            <tr>
+                <td>cellule 1</td>
+                <td rowspan="2">cellule 2</td>
+            </tr>
+            <tr>
+                <td>cellule 2</td>
+                <td>cellule 3</td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+<article>
+    <h1>Form(ulaires)</h1>
+    <p>Les formulaires permettent de saisir des entrees utilisateurs avec balise &lt;form&gt; et attributs action, type..etc</p>
+    <h2>Exples</h2>
+    <form action="" method="POST">
+        <!--Par defaut c'est la methode GET qui est utilisé par HTTP mais on peut specifier POST-->
+        <label for="nom">nom</label>
+        <input id="nom" type="text" placeholder="entrez votre nom" name="nom">
+        <!--value permet de mettre une valeur par defaut et recuperer ensuite la valeur de l'input-->
+        <!--name permet d'avoir le nom de l'attribut pour le serveur-->
+        <!--id sert a referencer la variable dans la page courante-->
+        <br>
+        <label for="prenom">prenom</label>
+        <input id="prenom" type="text" placeholder="entrez votre prenom" name="prenom">
+        <br>
+        <label for="password">password</label>
+        <input id="password" type="password" name="passwd">
+        <br>
+        <label for="gender-1">genre</label>
+        <!-- radio bouton, choix exclusif-->
+        <input id="gender-1" type="radio" value="F" name="gender">
+        <input id="gender-2" type="radio" value="M" name="gender">
+        <input id="gender-3" type="radio" value="FM" name="gender">
+        <br>
+        <label for="html">html</label>
+        <label for="css">css</label>
+        <label for="javascript">javascript</label>
+        <!-- checkbox, plusieurs choix stockes dans un tableau dont le nom est le contenu de "name"-->
+        <input id="html" type="checkbox" value="html" name="competences">
+        <input id="css" type="checkbox" value="css" name="competences">
+        <input id="javascript" type="checkbox" value="js" name="competences">
+        <br>
+
+        <input type="submit" value="Enregistrer">
+
+    </form>
+</article>
+<article>
+    <h1>HTTP</h1>
+    <section>
+        <p>Le standard du protocole HTTP est décrit dans des RFC</p>
+        <h1>Verbes HTTP</h1>
+        <p>GET, POST, PUT, DELETE, TRACE, OPTIONS, HEAD,...</p>
+        <p>GET emises lorsqu'on clique sur un hyperlien ou qu'on tape une adresse ds la barre</p>
+        <p>POST emises lorsqu'on valide un formulaire</p>
+    </section>
+</article>
+<article>
+    <h1>img</h1>
+    <h2>Exples</h2>
+    <img scr="http://dummyimage.com/320x200/000/fff" alt="un placeholder">
+</article>
+<article>
+    <h1>Pour regrouper du contenu</h1>
+    <p>section, article, header, footer, nav, aside, div, span..sont des block</p>
+    <p>div, division neutre, sans retour a la ligne</p>
+    <p>span, division neutre, avec retour a la ligne</p>
+    <p>aside, zone de coté reservee a qqchose</p>
+    <p>nav pour navigation primaire, secondaire</p>
+    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+</article>
+</body>
+</html>

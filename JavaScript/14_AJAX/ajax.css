@@ -1,0 +1,15 @@
+.gallery-item {
+    background-color: lightskyblue;
+    margin:10px;
+}
+
+.gallery-item p {
+    border-bottom: double;
+    font-size: 20px;
+
+}
+
+.gallery-section {
+    background-color: dodgerblue;
+    display:flex;
+}
